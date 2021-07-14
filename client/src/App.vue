@@ -81,7 +81,7 @@ export default {
       })
       } else {
         this.todos[this.check].name = this.currTodo;
-        console.log( 'index , currTodo' , this.check, this.currTodo)
+        console.log( 'index , currTodo' , this.currTodo)
         
         fetch('http://localhost:8081/editTodo', {
           method: 'post',

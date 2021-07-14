@@ -31,7 +31,7 @@ app.post('/addTodo', (req, res) => {
         }
         let tasks = JSON.parse(db);
         if(name){ 
-            tasks.push({name: name, status: 'To-do'});
+            tasks.push({name: name});
             res.json('successful');
         }
         fs.writeFile('data.json', JSON.stringify(tasks, null, 2), err => {
